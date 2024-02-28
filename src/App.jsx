@@ -13,6 +13,7 @@ import Quote from './Quote'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
+import { CssBaseline } from '@mui/material'
 
 function App() {
 
@@ -26,12 +27,13 @@ function App() {
 
   return (
     <>
-      <h1>State Demo</h1>
+    <CssBaseline />
+      {/* <h1>State Demo</h1> */}
       {/* <UserNameForm />
     <Counter />
     <Dumbo /> */}
 
-      <Stack spacing={2} direction="row" onClick={clickHandler}>
+      {/* <Stack spacing={2} direction="row" onClick={clickHandler}>
         <Button variant="text">Text</Button>
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button>
@@ -46,7 +48,7 @@ function App() {
           setScore(newValue);
         }}
       />
-      </div>
+      </div> */}
       {/* <ShoppingList />
     <EffectCounter />
     <Quote /> */}
