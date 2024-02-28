@@ -10,20 +10,34 @@ import ShoppingList from './ShoppingList'
 import EffectCounter from './EffectCounter'
 import Quote from './Quote'
 
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
 function App() {
 
+  const clickHandler = (e) => {
+    if(e.target.tagName === 'BUTTON') {
+      alert('Button clicked!');
+    }
+  }
 
   return (
     <>
-    <h1>State Demo</h1>
-    {/* <UserNameForm />
+      <h1>State Demo</h1>
+      {/* <UserNameForm />
     <Counter />
     <Dumbo /> */}
 
-    <ShoppingList />
+      <Stack spacing={2} direction="row" onClick={clickHandler}>
+        <Button variant="text">Text</Button>
+        <Button variant="contained">Contained</Button>
+        <Button variant="outlined">Outlined</Button>
+      </Stack>
+
+      {/* <ShoppingList />
     <EffectCounter />
-    <Quote />
-    {/* <ShoppingListForm /> */}
+    <Quote /> */}
+      {/* <ShoppingListForm /> */}
     </>
   )
 }
