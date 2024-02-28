@@ -15,24 +15,29 @@ import Stack from '@mui/material/Stack';
 
 function App() {
 
+  const clickHandler = (e) => {
+    if(e.target.tagName === 'BUTTON') {
+      alert('Button clicked!');
+    }
+  }
 
   return (
     <>
-    <h1>State Demo</h1>
-    {/* <UserNameForm />
+      <h1>State Demo</h1>
+      {/* <UserNameForm />
     <Counter />
     <Dumbo /> */}
 
-<Stack spacing={2} direction="row">
-      <Button variant="text">Text</Button>
-      <Button variant="contained">Contained</Button>
-      <Button variant="outlined">Outlined</Button>
-    </Stack>
+      <Stack spacing={2} direction="row" onClick={clickHandler}>
+        <Button variant="text">Text</Button>
+        <Button variant="contained">Contained</Button>
+        <Button variant="outlined">Outlined</Button>
+      </Stack>
 
-    {/* <ShoppingList />
+      {/* <ShoppingList />
     <EffectCounter />
     <Quote /> */}
-    {/* <ShoppingListForm /> */}
+      {/* <ShoppingListForm /> */}
     </>
   )
 }
