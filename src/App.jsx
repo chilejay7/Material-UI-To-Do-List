@@ -12,14 +12,17 @@ import Quote from './Quote'
 
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
+import Rating from '@mui/material/Rating';
 
 function App() {
 
   const clickHandler = (e) => {
-    if(e.target.tagName === 'BUTTON') {
+    if (e.target.tagName === 'BUTTON') {
       alert('Button clicked!');
     }
   }
+
+  const [score, setScore] = useState(3);
 
   return (
     <>
@@ -34,6 +37,16 @@ function App() {
         <Button variant="outlined">Outlined</Button>
       </Stack>
 
+    <div>
+      <h1>Current Score: {score}</h1>
+      <Rating
+        name="simple-controlled"
+        value={score}
+        onChange={(event, newValue) => {
+          setScore(newValue);
+        }}
+      />
+      </div>
       {/* <ShoppingList />
     <EffectCounter />
     <Quote /> */}
