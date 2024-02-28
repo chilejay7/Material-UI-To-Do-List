@@ -10,6 +10,9 @@ import ShoppingList from './ShoppingList'
 import EffectCounter from './EffectCounter'
 import Quote from './Quote'
 
+import Button from '@mui/material/Button';
+import Stack from '@mui/material/Stack';
+
 function App() {
 
 
@@ -20,9 +23,15 @@ function App() {
     <Counter />
     <Dumbo /> */}
 
-    <ShoppingList />
+<Stack spacing={2} direction="row">
+      <Button variant="text">Text</Button>
+      <Button variant="contained">Contained</Button>
+      <Button variant="outlined">Outlined</Button>
+    </Stack>
+
+    {/* <ShoppingList />
     <EffectCounter />
-    <Quote />
+    <Quote /> */}
     {/* <ShoppingListForm /> */}
     </>
   )
