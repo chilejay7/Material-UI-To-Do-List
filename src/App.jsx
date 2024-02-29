@@ -14,20 +14,22 @@ import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
 import { CssBaseline } from '@mui/material'
+import TodoList from './TodoList'
 
 function App() {
 
-  const clickHandler = (e) => {
-    if (e.target.tagName === 'BUTTON') {
-      alert('Button clicked!');
-    }
-  }
+  // const clickHandler = (e) => {
+  //   if (e.target.tagName === 'BUTTON') {
+  //     alert('Button clicked!');
+  //   }
+  // }
 
-  const [score, setScore] = useState(3);
+  // const [score, setScore] = useState(3);
 
   return (
     <>
     <CssBaseline />
+    <TodoList />
       {/* <h1>State Demo</h1> */}
       {/* <UserNameForm />
     <Counter />
