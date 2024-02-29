@@ -13,25 +13,29 @@ import Quote from './Quote'
 import Button from '@mui/material/Button';
 import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
+import { CssBaseline } from '@mui/material'
+import TodoList from './TodoList'
 
 function App() {
 
-  const clickHandler = (e) => {
-    if (e.target.tagName === 'BUTTON') {
-      alert('Button clicked!');
-    }
-  }
+  // const clickHandler = (e) => {
+  //   if (e.target.tagName === 'BUTTON') {
+  //     alert('Button clicked!');
+  //   }
+  // }
 
-  const [score, setScore] = useState(3);
+  // const [score, setScore] = useState(3);
 
   return (
     <>
-      <h1>State Demo</h1>
+    <CssBaseline />
+    <TodoList />
+      {/* <h1>State Demo</h1> */}
       {/* <UserNameForm />
     <Counter />
     <Dumbo /> */}
 
-      <Stack spacing={2} direction="row" onClick={clickHandler}>
+      {/* <Stack spacing={2} direction="row" onClick={clickHandler}>
         <Button variant="text">Text</Button>
         <Button variant="contained">Contained</Button>
         <Button variant="outlined">Outlined</Button>
@@ -46,7 +50,7 @@ function App() {
           setScore(newValue);
         }}
       />
-      </div>
+      </div> */}
       {/* <ShoppingList />
     <EffectCounter />
     <Quote /> */}
