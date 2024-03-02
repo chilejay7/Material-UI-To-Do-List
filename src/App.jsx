@@ -15,6 +15,7 @@ import Stack from '@mui/material/Stack';
 import Rating from '@mui/material/Rating';
 import { CssBaseline } from '@mui/material'
 import TodoList from './TodoList'
+import Navbar from './Navbar'
 
 function App() {
 
@@ -29,6 +30,7 @@ function App() {
   return (
     <>
     <CssBaseline />
+    <Navbar />
     <TodoList />
       {/* <h1>State Demo</h1> */}
       {/* <UserNameForm />
