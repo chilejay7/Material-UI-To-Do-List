@@ -5,6 +5,12 @@ import TodoForm from "./TodoForm";
 import { v4 as uuidv4 } from "uuid";
 
 
+const getInitialData = () => {
+    const data = JSON.parse(localStorage.getItem('todos'));
+    if (!data) return [];
+    return data;
+}
+
 const initialTodos = [
     { id: uuidv4(), text: "eat breakfast", completed: false },
     { id: uuidv4(), text: "walk the dog", completed: true },
@@ -14,7 +20,7 @@ const initialTodos = [
 
 export default function TodoList() {
 
-    const [todos, setToDos] = useState(initialTodos);
+    const [todos, setToDos] = useState(getInitialData);
 
     useEffect(() => {
         localStorage.setItem('todos', JSON.stringify(todos))
