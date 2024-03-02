@@ -2,18 +2,17 @@ import { useState } from "react";
 import List from '@mui/material/List';
 import TodoItem from "./TodoItem";
 import TodoForm from "./TodoForm";
-
+import { v4 as uuidv4 } from "uuid";
 
 
 const initialTodos = [
-    { id: 1, text: "eat breakfast", completed: false },
-    { id: 2, text: "walk the dog", completed: true },
-    { id: 3, text: "cook dinner", completed: true },
-    { id: 4, text: "study", completed: false },
+    { id: uuidv4(), text: "eat breakfast", completed: false },
+    { id: uuidv4(), text: "walk the dog", completed: true },
+    { id: uuidv4(), text: "cook dinner", completed: true },
+    { id: uuidv4(), text: "study", completed: false },
 ]
 
 export default function TodoList() {
-
 
     const [todos, setToDos] = useState(initialTodos);
 
@@ -35,6 +34,12 @@ export default function TodoList() {
         })
     }
 
+    const addTodo = (text) => {
+        setToDos(prevTodos => {
+           return [...prevTodos,  { text: text, id: uuidv4(), completed: false }];
+        })
+    }
+
     return (
         <>
         <h1> To Do List</h1>
@@ -46,7 +51,7 @@ export default function TodoList() {
             }
             )}
 
-            <TodoForm />
+            <TodoForm addTodo={addTodo} />
         </List>
 
         </>
