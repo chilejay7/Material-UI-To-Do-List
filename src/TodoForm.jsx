@@ -27,6 +27,8 @@ export default function TodoForm({ addTodo }) {
                                 <IconButton
                                     aria-label="toggle password visibility"
                                     edge="end"
+                                    // This makes the icon a submit button
+                                    type="submit"
                                 >
                                     <Create />
                                 </IconButton>
