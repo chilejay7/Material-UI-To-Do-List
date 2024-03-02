@@ -35,6 +35,8 @@ export default function TodoList() {
     }
 
     return (
+        <>
+        <h1> To Do List</h1>
         <List sx={{ width: '100%', maxWidth: 360, bgcolor: 'background.paper' }}>
             {todos.map((todo) => {
 
@@ -44,5 +46,7 @@ export default function TodoList() {
             )}
 
         </List>
+
+        </>
     )
 }
