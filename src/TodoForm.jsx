@@ -20,7 +20,7 @@ export default function TodoForm({ addTodo }) {
     return (
         <form onSubmit={ handleSubmit }>
             <ListItem>
-                <TextField id="filled-basic" label="Filled" variant="filled" onChange={handleChange} value={text}
+                <TextField id="filled-basic" label="Create new item" variant="filled" onChange={handleChange} value={text}
                     InputProps={{
                         endAdornment: (
                             <InputAdornment position="end">
